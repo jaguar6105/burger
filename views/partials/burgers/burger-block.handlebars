@@ -1,11 +1,16 @@
 <li>
-    {{burger_name}}
-
-    {{#if devoured}}
-    <p>Burger Eaten</p>
-    {{else}}
-    <button class="change-eat" data-id="{{id}}" data-devoured="{{devoured}}">
-        Eat
-    </button>
-    {{/if}}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{burger_name}}
+            </h5>
+            <p class="card-text">
+                {{#if devoured}}
+            <p>Burger Eaten</p>
+            {{else}}
+            <button class="change-eat" data-id="{{id}}" data-devoured="{{devoured}}">
+                Eat
+            </button>
+            {{/if}}</p>
+        </div>
+    </div>
 </li>
