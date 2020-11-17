@@ -2,12 +2,11 @@
 $(function () {
     $(".change-eat").on("click", function (event) {
         var id = $(this).data("id");
-        var newEaten = $(this).data("newsleep");
+        var newEaten = $(this).data("devoured");
 
         var newdevoured = {
-            devoured: new newEaten
+            devoured: newEaten
         };
-
         // Send the PUT request.
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
