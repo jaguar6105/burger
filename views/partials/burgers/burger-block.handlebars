@@ -2,6 +2,8 @@
     {{burger_name}}
 
     {{#if devoured}}
+    <p>Burger Eaten</p>
+    {{else}}
     <button class="change-eat" data-id="{{id}}" data-devoured="{{devoured}}">
         Eat
     </button>
