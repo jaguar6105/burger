@@ -59,7 +59,7 @@ const orm = {
         console.log(queryString);
 
 
-        connection.query(queryString, function (err, result) {
+        connection.query(queryString, vals, function(err, result) {
             if (err) {
                 throw err;
             }
@@ -76,7 +76,7 @@ const orm = {
 
         console.log(queryString);
 
-        connection.query(queryString, function (err, result) {
+        connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
             }

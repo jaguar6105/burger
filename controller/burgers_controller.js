@@ -17,10 +17,10 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.insertOne([
+    burger.insertOne([
     "burger_name"
   ], [
-    req.body.name, req.body.sleepy
+    req.body.name
   ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });

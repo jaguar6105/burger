@@ -26,7 +26,7 @@ $(function () {
         event.preventDefault();
 
         let newBurger = {
-            name: $("#burger").val(),
+            name: $("#bu").val(),
         };
 
         // Send the POST request.
