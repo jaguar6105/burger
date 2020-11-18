@@ -16,23 +16,25 @@ router.get("/", function(req, res) {
   });
 });
 
+//create a burger
 router.post("/api/burgers", function(req, res) {
     burger.insertOne([
     "burger_name"
   ], [
     req.body.name
   ], function(result) {
-    // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
 
+//make a burger eaten
 router.put("/api/burgers/:id", function(req, res) {
   let condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
   burger.updateOne({
+    //because burger is not flipping between devoured and not it is hard coded
     devoured: 1
   }, condition, function(result) {
     if (result.changedRows == 0) {

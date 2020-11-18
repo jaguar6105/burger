@@ -2,6 +2,7 @@
 const orm = require("../config/orm.js");
 
 const burger = {
+  //get all data
     selectAll: function(cb) {
     orm.selectAll("burgers", function(res) {
       cb(res);
@@ -13,6 +14,9 @@ const burger = {
       cb(res);
     });
   },
+  //update a burger
+  //condition is a string 
+  //objColVals is an obj
   updateOne: function(objColVals, condition, cb) {
     orm.updateOne("burgers", objColVals, condition, function(res) {
       cb(res);

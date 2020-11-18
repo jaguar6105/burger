@@ -37,6 +37,7 @@ function objToSql(ob) {
 
 
 const orm = {
+    //gets all data from a provided table
     selectAll: function (tableInput, cb) {
         let queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function (err, result) {
@@ -47,6 +48,7 @@ const orm = {
         });
     },
 
+    //insert data into a table
     insertOne: function (tableInput, cols, vals, cb) {
         let queryString = "INSERT INTO " + tableInput;
         queryString += " (";
@@ -67,6 +69,7 @@ const orm = {
         });
     },
 
+    //update a row in the table
     updateOne: function (tableInput, objColVals, condition, cb) {
         let queryString = "UPDATE " + tableInput;
         queryString += " SET ";

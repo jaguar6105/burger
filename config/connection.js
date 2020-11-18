@@ -2,11 +2,11 @@ const mysql = require("mysql");
 
 let connection;
 
+//initialize connection
+//either jawsdb or local connection
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-  //otherwise, we're going to use our local connection!  put your local db set stuff here
-  //(and remember our best practice of using the dotenv package and a .env file ;)
   connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
